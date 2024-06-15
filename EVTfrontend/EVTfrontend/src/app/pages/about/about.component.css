@@ -1,0 +1,20 @@
+.about-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.about-container h1 {
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.about-container button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+}

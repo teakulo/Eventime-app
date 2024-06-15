@@ -1,0 +1,23 @@
+<div class="profile-edit-container" *ngIf="user; else noUser">
+  <h1>Edit Profile</h1>
+  <form (ngSubmit)="onSubmit()">
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+
+    <label for="bio">Bio</label>
+    <textarea id="bio" name="bio" [(ngModel)]="user.bio"></textarea>
+
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <h2>Friends</h2>
+  <ul>
+    <li *ngFor="let friend of user.friends">{{ friend.firstName }} {{ friend.lastName }}</li>
+  </ul>
+</div>
+<ng-template #noUser>
+  <p>No user found.</p>
+</ng-template>

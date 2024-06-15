@@ -1,0 +1,12 @@
+<div class="event-list">
+  <div *ngFor="let event of events" class="event-card">
+    <h2>{{ event.name }}</h2>
+    <p>{{ event.description }}</p>
+    <p>{{ event.start_time | date:'dd/MM/yyyy' }}</p>
+    <p>{{ event.venue }}</p>
+    <p>Created by: {{ event.creatorNickname }}</p>
+    <button (click)="viewEventDetails(event.id)">View Details</button>
+    <button (click)="editEvent(event.id)">Edit Event</button>
+    <button (click)="deleteEvent(event.id)">Delete Event</button>
+  </div>
+</div>

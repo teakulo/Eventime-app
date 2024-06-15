@@ -1,0 +1,40 @@
+server:
+  port: ${APPLICATION_PORT:8080}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${APP_DB_URL:localhost}:${APP_DB_PORT:5432}/${APP_DB_NAME:evt_db}
+    username: ${APP_DB_USERNAME:postgres}
+    password: ${APP_DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    openInView: false
+    show_sql: true
+    generate-ddl: true
+  data:
+    jpa:
+      repositories.enabled: true
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+
+application:
+  security:
+    jwt:
+      secret-key: 566D5971337336763979244226452948404D635166546A576E5A723475377721
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
+frontend:
+  url: ${FRONTEND_API_URL:http://localhost:4200}
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+    com:
+      example:
+        backend: DEBUG

@@ -1,0 +1,22 @@
+<div>
+  <header>
+    <div class="header-container">
+      <div class="header-title">Eventime App</div>
+      <nav *ngIf="isAuthenticated">
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/profile/edit">Edit Profile</a></li>
+          <li><a routerLink="/calendar">Calendar</a></li>
+          <li><a routerLink="/events/create">Create Event</a></li>
+          <li><a routerLink="/chatbot">Chatbot</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a (click)="logout()">Logout</a></li>
+        </ul>
+      </nav>
+      <div *ngIf="isAuthenticated" class="welcome-message">
+        Welcome
+      </div>
+    </div>
+  </header>
+  <router-outlet></router-outlet>
+</div>

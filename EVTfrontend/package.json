@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "date-fns": "^3.6.0",
+    "jwt-decode": "^4.0.0"
+  }
+}

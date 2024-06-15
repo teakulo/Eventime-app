@@ -1,0 +1,36 @@
+<div *ngIf="user">
+  <h1>{{ user.nickname }}'s Calendar</h1>
+  <div class="calendar-header">
+    <button (click)="previousMonth()">&#8592;</button>
+    <span>{{ getMonthName(month) }} {{ year }}</span>
+    <button (click)="nextMonth()">&#8594;</button>
+  </div>
+  <table class="calendar-table">
+    <thead>
+    <tr>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+      <th>Sun</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let week of calendar">
+      <td *ngFor="let day of week" [ngClass]="{'empty-cell': !day}">
+        <div *ngIf="day">
+          <span>{{ day.getDate() }}</span>
+          <div *ngFor="let event of getEventsForDate(day)" (click)="viewEventDetails(event.id)" class="event">
+            {{ event.name }}
+          </div>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noUser>
+  <p>No user found.</p>
+</ng-template>

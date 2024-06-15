@@ -1,0 +1,74 @@
+.home-container {
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.create-event-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 20px;
+}
+
+.create-event-btn:hover {
+  background-color: var(--dark-purple);
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.event-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.event-card h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.event-card p {
+  margin: 5px 0;
+}
+
+.event-card button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 10px;
+}
+
+.event-card button:hover {
+  background-color: var(--light-yellow);
+}
+
+.delete-event-btn {
+  background-color:  var(--very-light-pastel-red);
+  color: var(--white-color);
+}
+
+.delete-event-btn:hover {
+  background-color: #c0392b;
+}

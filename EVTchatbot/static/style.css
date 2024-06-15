@@ -1,0 +1,102 @@
+:root {
+    --background-color: #f9f9f9; /* Very light gray */
+    --primary-color: #e0bbf7; /* Very light purple */
+    --secondary-color: #fff9c4; /* Very light pastel yellow */
+    --white-color: #ffffff;
+    --text-color: #333;
+    --dark-purple: #c5a3e0; /* Darker shade of purple */
+    --light-yellow: #fff9c4;
+    --darker-yellow: #FFD833;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: var(--white-color);
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: var(--dark-purple);
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: var(--primary-color); /* Very light purple */
+    color: var(--white-color);
+    border-radius: 15px 15px 0 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.chatbot-message {
+    background-color: var(--secondary-color); /* Very light pastel yellow */
+    color: var(--text-color);
+    border-radius: 15px 15px 15px 0;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#user-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+#user-message {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--primary-color); /* Very light purple */
+    border-radius: 5px;
+}
+
+#send-button {
+    background-color: var(--primary-color); /* Very light purple */
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}

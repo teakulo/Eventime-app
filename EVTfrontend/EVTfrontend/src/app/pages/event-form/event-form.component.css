@@ -1,0 +1,50 @@
+.event-create-container {
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-create-container h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.event-create-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-create-container label {
+  margin-top: 10px;
+}
+
+.event-create-container input,
+.event-create-container textarea,
+.event-create-container select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.event-create-container button {
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.event-create-container button:hover {
+  background-color: var(--dark-purple);
+}
+
+.required {
+  color: var(--very-light-pastel-red);
+}

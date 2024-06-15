@@ -1,0 +1,29 @@
+<div class="event-details-container" *ngIf="event">
+  <h1>{{ event.name }}</h1>
+  <p>{{ event.description }}</p>
+  <p>{{ getFormattedDate(event.start_time) }} - {{ getFormattedDate(event.end_time) }}</p>
+  <p>Venue: {{ event.venue }}, {{ event.city }}</p>
+  <p>Category: {{ event.category || 'No category specified' }}</p>
+  <p>Genre: {{ event.genre || 'No genre specified' }}</p>
+  <p>Duration: {{ event.duration || 'No duration specified' }}</p>
+  <p>Price: {{ event.price ? event.price + ' KM' : 'Free' }}</p>
+  <p *ngIf="event.creator">Created by: {{ event.creator.nickname }}</p>
+
+  <div>
+    <button (click)="toggleAttendance()">
+      {{ isAttending ? 'Not Attending' : 'I\'m Attending' }}
+    </button>
+  </div>
+
+  <h2>Attendees</h2>
+  <ul>
+    <li *ngFor="let attendee of attendees">
+      {{ attendee.nickname }}
+      <button class="add-friend-btn" *ngIf="!isFriend(attendee)" (click)="addFriend(attendee.id)">Add Friend</button>
+      <button class="remove-friend-btn" *ngIf="isFriend(attendee)" (click)="removeFriend(attendee.id)">Remove Friend</button>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!event">
+  <p>Loading event details...</p>
+</div>

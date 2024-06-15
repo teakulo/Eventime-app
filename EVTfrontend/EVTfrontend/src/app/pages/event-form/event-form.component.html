@@ -1,0 +1,36 @@
+<div class="event-create-container">
+  <h1>{{ isEditing ? 'Edit Event' : 'Create Event' }}</h1>
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <label for="name">Event Name <span class="required">*</span></label>
+    <input type="text" id="name" name="name" formControlName="name" required>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" formControlName="description"></textarea>
+
+    <label for="start_time">Start Time <span class="required">*</span></label>
+    <input type="datetime-local" id="start_time" name="start_time" formControlName="start_time" required>
+
+    <label for="end_time">End Time <span class="required">*</span></label>
+    <input type="datetime-local" id="end_time" name="end_time" formControlName="end_time" required>
+
+    <label for="venue">Venue <span class="required">*</span></label>
+    <input type="text" id="venue" name="venue" formControlName="venue" required>
+
+    <label for="city">City <span class="required">*</span></label>
+    <input type="text" id="city" name="city" formControlName="city" required>
+
+    <label for="category">Category</label>
+    <input type="text" id="category" name="category" formControlName="category">
+
+    <label for="duration">Duration (hours)</label>
+    <input type="number" id="duration" name="duration" formControlName="duration">
+
+    <label for="genre">Genre</label>
+    <input type="text" id="genre" name="genre" formControlName="genre">
+
+    <label for="price">Price (BAM)</label>
+    <input type="number" id="price" name="price" formControlName="price">
+
+    <button type="submit">{{ isEditing ? 'Update Event' : 'Create Event' }}</button>
+  </form>
+</div>

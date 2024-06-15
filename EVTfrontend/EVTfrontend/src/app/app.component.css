@@ -1,0 +1,38 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.header-title {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.2s;
+}
+
+nav ul li a:hover {
+  background-color: var(--dark-purple);
+}
+
+.welcome-message {
+  font-size: 18px;
+  color: var(--white-color);
+}

@@ -1,0 +1,54 @@
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--white-color);
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-table th {
+  width: 14.28%; /* Each day should take equal width, 100% / 7 days */
+  height: 40px; /* Smaller height for header cells */
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.calendar-table td {
+  width: 14.28%; /* Each day should take equal width, 100% / 7 days */
+  height: 100px; /* Fixed height for each cell */
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.empty-cell {
+  background-color: var(--background-color);
+}
+
+.event {
+  background-color: #e0f7fa;
+  color: var(--text-color);
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.event:hover {
+  background-color: var(--secondary-color);
+}

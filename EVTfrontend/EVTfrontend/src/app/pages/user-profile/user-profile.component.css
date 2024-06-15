@@ -1,0 +1,58 @@
+:host {
+  display: block;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+}
+
+h1 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--darker-yellow);
+}
+
+.edit-profile-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  margin-top: 20px;
+}
+
+.edit-profile-btn:hover {
+  background-color: var(--dark-lilac);
+}
+
+.remove-friend-btn {
+  background-color: #e74c3c; /* Red */
+  color: var(--white-color);
+  margin-left: 10px;
+}
+
+.remove-friend-btn:hover {
+  background-color: #c0392b;
+}
